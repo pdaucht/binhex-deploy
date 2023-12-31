@@ -1,0 +1,11 @@
+---
+- name: Deploy Binhex Odoo SAAS Ansible
+  hosts: all
+  become: true
+  tasks:
+      - name: pull from git
+        git:
+          repo: git@github.com:pdaucht/binhex-odoosaas.git
+          dest: /root/binhex-odoosaas
+          update: yes
+          version: "{{ branch }}"
