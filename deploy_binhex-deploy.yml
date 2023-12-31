@@ -3,7 +3,7 @@
   hosts: localhost
   become: true
   tasks:
-      - name: pull from git
+      - name: Pull Binhex-Deploy from GIT
         git:
           repo: git@github.com:pdaucht/binhex-deploy.git
           dest: /var/lib/jenkins/binhex-deploy
