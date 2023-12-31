@@ -1,7 +1,6 @@
 ---
 - name: Deploy Binhex-Deploy Ansible
   hosts: localhost
-  become: true
   tasks:
       - name: Pull Binhex-Deploy from GIT
         git:
