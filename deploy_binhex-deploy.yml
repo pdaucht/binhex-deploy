@@ -2,7 +2,7 @@
 - name: Deploy Binhex-Deploy Ansible
   hosts: localhost
   tasks:
-      - name: Pull Binhex-Deploy from GIT
+      - name: Pull Binhex-Deploy from GITHUB
         git:
           repo: git@github.com:pdaucht/binhex-deploy.git
           dest: /var/lib/jenkins/binhex-deploy
