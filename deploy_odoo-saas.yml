@@ -2,6 +2,7 @@
 - name: Deploy Odoo SAAS
   hosts: "{{ host }}"
   become: true
+  gather_facts: false
   tasks:
       - name: pull from git
         git:
