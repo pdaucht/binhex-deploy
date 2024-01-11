@@ -9,3 +9,6 @@
           dest: /usr/lib/python3/dist-packages/odoo/extra-addons/binhex/odoo_saas
           update: yes
           version: "{{ branch }}"
+      
+      - name: Restart Odoo Service
+        service: name=odoo state=restarted
