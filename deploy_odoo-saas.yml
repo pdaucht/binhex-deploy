@@ -6,7 +6,7 @@
   tasks:
       - name: pull from git
         git:
-          repo: https://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@github.com/BinhexSystemss/odoo_saas.git
+          repo: https://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@github.com/BinhexSystemss/odoo_saas.git
           dest: /usr/lib/python3/dist-packages/odoo/extra-addons/binhex/odoo_saas
           update: yes
           version: "{{ branch }}"
