@@ -1,6 +1,6 @@
 ---
 - name: Deploy Binhex Odoo SAAS Ansible
-  hosts: ANSIBLE-PROD
+  hosts: "{{ host }}"
   become: true
   tasks:
       - name: pull from git
