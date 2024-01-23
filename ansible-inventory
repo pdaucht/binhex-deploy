@@ -3,7 +3,7 @@
 rhaenyra-ansible.binhex.cloud
 
 [ANSIBLE-DEV]
-dev-ansible.binhex.cloud
+10.0.13.253
 
 [ODOOSAAS-PROD]
 10.0.13.250
