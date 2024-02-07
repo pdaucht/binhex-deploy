@@ -1,0 +1,15 @@
+---
+- name: Deploy e-commerce
+  hosts: "{{ host }}"
+  become: true
+  gather_facts: false
+  tasks:
+      - name: pull from git
+        git:
+          repo: git@github.com:BinhexSystemss/e-commerce.git
+          dest: /opt/odoo-server/extra-addons/oca/e-commerce
+          update: yes
+          version: "{{ branch }}"
+      
+      - name: Restart Odoo Service
+        service: name=odoo state=restarted

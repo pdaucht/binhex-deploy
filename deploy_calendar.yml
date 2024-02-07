@@ -1,0 +1,15 @@
+---
+- name: Deploy Calendar
+  hosts: "{{ host }}"
+  become: true
+  gather_facts: false
+  tasks:
+      - name: pull from git
+        git:
+          repo: git@github.com:BinhexSystemss/calendar.git
+          dest: /opt/odoo-server/extra-addons/oca/calendar
+          update: yes
+          version: "{{ branch }}"
+      
+      - name: Restart Odoo Service
+        service: name=odoo state=restarted
