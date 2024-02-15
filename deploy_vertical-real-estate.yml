@@ -1,0 +1,15 @@
+---
+- name: Deploy vertical-real-estate
+  hosts: "{{ host }}"
+  become: true
+  gather_facts: false
+  tasks:
+      - name: pull from git
+        git:
+          repo: git@github.com:BinhexTeam/vertical-real-estate.git
+          dest: /opt/odoo-server/extra_addons/binhex/vertical-real-estate
+          update: yes
+          version: "{{ branch }}"
+      
+      - name: Restart Odoo Service
+        service: name=odoo state=restarted
