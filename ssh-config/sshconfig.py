@@ -4,7 +4,7 @@ import sys
 with open('/var/lib/jenkins/binhex-deploy/ssh-config/nodes.json') as user_file:
   jsonfile = user_file.read()
 
-fileName = "/var/lib/jenkins/.ssh/config-0"
+fileName = "/var/lib/jenkins/.ssh/config"
 
 data = json.loads(jsonfile)
    
@@ -25,6 +25,5 @@ for cluster in data:
                 sshconfig.write("   HostName "+containers["ip"]+"\n")
                 sshconfig.write("   User root\n")
                 sshconfig.write("   ProxyJump "+nodes["nodeproxy"]+"\n\n")
-
         
 sshconfig.close()
