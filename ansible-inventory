@@ -2,6 +2,7 @@
 10.0.13.4
 rhaenyra-ansible.binhex.cloud
 viserys-ansible.binhex.cloud
+joffrey-ansible.binhex.cloud
 
 [ANSIBLE-DEV]
 10.0.13.253
