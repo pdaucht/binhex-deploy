@@ -1,0 +1,15 @@
+---
+- name: Deploy rocasa_custom
+  hosts: "{{ host }}"
+  become: true
+  gather_facts: false
+  tasks:
+      - name: pull from git
+        git:
+          repo: git@github.com:BinhexTeam/rocasa_custom.git
+          dest: /usr/lib/python3/dist-packages/odoo/extra-addon/binhex/rocasa_custom
+          update: yes
+          version: "{{ branch }}"
+      
+      - name: Restart Odoo Service
+        service: name=odoo state=restarted
