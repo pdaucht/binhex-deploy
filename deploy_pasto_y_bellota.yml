@@ -1,0 +1,15 @@
+---
+- name: pasto_y_bellota
+  hosts: "{{ host }}"
+  become: true
+  gather_facts: false
+  tasks:
+      - name: pull from git
+        git:
+          repo: git@github.com:BinhexTeam/pasto_y_bellota.git
+          dest: /usr/lib/python3/dist-packages/odoo/extra-addons/binhex/pasto_y_bellota
+          update: yes
+          version: "{{ branch }}"
+      
+      - name: Restart Odoo Service
+        service: name=odoo state=restarted
