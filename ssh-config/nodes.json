@@ -51,7 +51,7 @@
         {"nodename":"harry",
          "nodeproxy":"harry-pr.binhex.cloud",
          "data":[
-                {"ip":"10.0.2.25","name":"pre-rocasa.binhex.cloud"}
+                {"ip":"10.1.0.198","name":"rocasa-pre.binhex.cloud"}
             ]
         }
     ]
