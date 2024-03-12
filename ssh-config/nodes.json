@@ -15,7 +15,7 @@
          "data":[
                 {"ip":"10.1.13.3","name":"rhaenyra-ansible.binhex.cloud"},
                 {"ip":"10.1.13.254","name":"dev.binhex.cloud"},
-                {"ip":"10.0.8.19","name":"bur2000.binhex.es"},
+                {"ip":"10.1.13.32","name":"bur16.binhex.cloud"},
                 {"ip":"10.1.13.253","name":"dev-ansible.binhex.cloud"}
 
             ]
