@@ -1,0 +1,15 @@
+---
+- name: MIG_bur2000
+  hosts: "{{ host }}"
+  become: true
+  gather_facts: false
+  tasks:
+      - name: pull from git
+        git:
+          repo: git@github.com:BinhexTeam/MIG_bur2000.git
+          dest: /usr/lib/python3/dist-packages/odoo/extra-addons/binhex/MIG_bur2000
+          update: yes
+          version: "{{ branch }}"
+      
+      - name: Restart Odoo Service
+        service: name=odoo state=restarted
