@@ -6,8 +6,8 @@
   tasks:
       - name: pull from git
         git:
-          repo: git@github.com:BinhexTeam/vertical-real-estate.git
-          dest: /opt/odoo-server/extra_addons/binhex/vertical-real-estate
+          repo: git@github.com:BinhexTeam/alca_custom.git
+          dest: /opt/odoo-server/extra_addons/binhex/alca_custom
           update: yes
           version: "{{ branch }}"
       
