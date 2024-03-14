@@ -28,6 +28,7 @@
          "data":[
             {"ip":"10.2.13.3","name":"viserys-ansible.binhex.cloud"},
             {"ip":"10.2.13.27","name":"realcloubnautico45.binhex.cloud"},
+            {"ip":"10.2.13.19","name":"poa-pre.binhex.cloud"},
             {"ip":"10.2.13.23","name":"pastoybellota-pre.binhex.cloud"}
                 
             ]

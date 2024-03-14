@@ -1,0 +1,15 @@
+---
+- name: Deploy poa_custom
+  hosts: "{{ host }}"
+  become: true
+  gather_facts: false
+  tasks:
+      - name: pull from git
+        git:
+          repo: git@github.com:BinhexTeam/poa_custom.git
+          dest: /usr/lib/python3/dist-packages/odoo/extra-addons/binhex/poa_custom
+          update: yes
+          version: "{{ branch }}"
+      
+      - name: Restart Odoo Service
+        service: name=odoo state=restarted
